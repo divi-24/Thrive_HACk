@@ -1,0 +1,80 @@
+.star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle var(--twinkle-duration) infinite;
+  z-index: 1;
+}
+
+.star.parallax {
+  animation: twinkle var(--twinkle-duration) infinite,
+             parallax var(--parallax-duration) infinite linear;
+}
+
+.star.small {
+  width: 1px;
+  height: 1px;
+}
+
+.star.medium {
+  width: 2px;
+  height: 2px;
+}
+
+.star.large {
+  width: 3px;
+  height: 3px;
+  box-shadow: 0 0 4px #009db9;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: var(--star-opacity);
+  }
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(-100vh) translateX(var(--parallax-distance));
+  }
+  to {
+    transform: translateY(100vh) translateX(calc(var(--parallax-distance) * -1));
+  }
+}
+
+/* Create multiple layers of stars with different speeds */
+.star-layer-1 .star {
+  --twinkle-duration: 4s;
+  --star-opacity: 0.8;
+  --parallax-duration: 20s;
+  --parallax-distance: 50px;
+}
+
+.star-layer-2 .star {
+  --twinkle-duration: 6s;
+  --star-opacity: 0.6;
+  --parallax-duration: 30s;
+  --parallax-distance: 100px;
+}
+
+.star-layer-3 .star {
+  --twinkle-duration: 8s;
+  --star-opacity: 0.4;
+  --parallax-duration: 40s;
+  --parallax-distance: 150px;
+} 
