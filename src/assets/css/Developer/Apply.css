@@ -1,0 +1,186 @@
+/* Page Layout */
+.apply-page {
+  background-color: #000000;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* Container */
+.apply-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Job Card */
+.job-card {
+  background-color: #111111;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 1px solid #2d2d2d;
+}
+
+.job-card h3 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.company-name {
+  color: #0066FF;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.job-description {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Job Details Section */
+.job-details {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 1px solid #2d2d2d;
+}
+
+.job-details p {
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.job-details strong {
+  color: #0066FF;
+  font-weight: 600;
+}
+
+.job-details ul {
+  margin: 15px 0;
+  padding-left: 20px;
+  color: #ffffff;
+}
+
+.job-details li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* Action Buttons */
+.swipe-instructions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.swipe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  min-width: 120px;
+}
+
+.swipe-left {
+  background-color: #2A1515;
+  color: #ffffff;
+}
+
+.swipe-left:hover {
+  background-color: #3A1F1F;
+  color: #ffffff;
+}
+
+.swipe-right {
+  background-color: #152A15;
+  color: #ffffff;
+}
+
+.swipe-right:hover {
+  background-color: #1F3A1F;
+  color: #ffffff;
+}
+
+.bookmark-icon {
+  background-color: #1a1a1a;
+  color: #FFC107;
+}
+
+.bookmark-icon:hover {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+/* Messages */
+.info-message {
+  background-color: #152A15;
+  color: #4CAF50;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-message {
+  background-color: #2A1515;
+  color: #FF6B6B;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.no-jobs-message {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.swipe-hint {
+  display: block;
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 14px;
+  margin-top: 15px;
+}
