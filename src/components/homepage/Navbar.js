@@ -7,7 +7,7 @@ import companyLogo from "../../assets/images/Cp.png";
 const Navbar = () => {
   const handleToggleClick = () => {
     // Replace this URL with the actual deployed link when provided
-    window.location.href = "https://thriveai.vercel.app/"; // This will be replaced with the actual URL
+    window.location.href = "https://thrve-hack.vercel.app/"; // This will be replaced with the actual URL
   };
 
   return (
