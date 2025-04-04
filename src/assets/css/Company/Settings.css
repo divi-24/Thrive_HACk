@@ -1,0 +1,330 @@
+/* 🌟 Main Settings Container */
+.company-settings-container {
+  max-width: 900px;
+  margin: 100px auto 2rem;
+  padding: 2rem;
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(18, 18, 18, 0.9));
+  border: 1px solid rgba(0, 157, 185, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  font-family: 'Inter', sans-serif;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.company-settings-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(0, 157, 185, 0.4),
+    rgba(0, 157, 185, 0.6),
+    rgba(0, 157, 185, 0.4),
+    transparent
+  );
+  opacity: 0.5;
+}
+
+/* 🌟 Header */
+.company-settings-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 157, 185, 0.1);
+  position: relative;
+}
+
+/* 🌟 Grid Layout */
+.company-settings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 🌟 Settings Item */
+.company-settings-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: rgba(26, 26, 26, 0.7);
+  border: 1px solid rgba(0, 157, 185, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+}
+
+.company-settings-item:hover {
+  background: rgba(26, 26, 26, 0.9);
+  transform: translateY(-2px);
+  border-color: rgba(0, 157, 185, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 157, 185, 0.1);
+}
+
+/* 🌟 Left Side (Title & Icon) */
+.company-settings-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 40%;
+}
+
+.company-settings-left h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.company-settings-icon {
+  font-size: 1.25rem;
+  color: #009db9;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: rgba(0, 157, 185, 0.1);
+}
+
+.company-settings-icon:hover {
+  background: rgba(0, 157, 185, 0.2);
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 8px rgba(0, 157, 185, 0.3));
+}
+
+/* 🌟 Right Side (Inputs & Buttons) */
+.company-settings-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 🌟 Input Fields */
+.company-settings-right input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0, 157, 185, 0.1);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  background: rgba(26, 26, 26, 0.7);
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.company-settings-right input:focus {
+  border-color: #009db9;
+  box-shadow: 0 0 0 2px rgba(0, 157, 185, 0.1);
+  outline: none;
+}
+
+/* 🌟 Buttons */
+.company-settings-right button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 157, 185, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: auto;
+  min-width: 120px;
+  background: rgba(0, 157, 185, 0.1);
+  color: #009db9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.company-settings-right button:hover {
+  background: rgba(0, 157, 185, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 157, 185, 0.1);
+}
+
+/* 🌟 Special Button Styles */
+.company-delete-button {
+  background: rgba(220, 38, 38, 0.1) !important;
+  color: #ef4444 !important;
+  border-color: rgba(220, 38, 38, 0.2) !important;
+}
+
+.company-delete-button:hover {
+  background: rgba(220, 38, 38, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1) !important;
+}
+
+.company-logout-button {
+  background: rgba(234, 88, 12, 0.1) !important;
+  color: #f97316 !important;
+  border-color: rgba(234, 88, 12, 0.2) !important;
+}
+
+.company-logout-button:hover {
+  background: rgba(234, 88, 12, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1) !important;
+}
+
+/* 🌟 Modal Styling */
+.company-modal-overlay-settings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.company-modal-content-settings {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(18, 18, 18, 0.95));
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  border: 1px solid rgba(0, 157, 185, 0.1);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.company-modal-content-settings::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(0, 157, 185, 0.3),
+    rgba(0, 157, 185, 0.5),
+    rgba(0, 157, 185, 0.3),
+    transparent
+  );
+}
+
+.company-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.company-confirm-delete {
+  background: rgba(220, 38, 38, 0.1) !important;
+  color: #ef4444 !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.company-confirm-delete:hover {
+  background: rgba(220, 38, 38, 0.15) !important;
+  transform: translateY(-1px);
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 1024px) {
+  .company-settings-container {
+    margin: 90px 1rem 1rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-settings-container {
+    margin: 80px 1rem 1rem;
+    padding: 1.25rem;
+  }
+
+  .company-settings-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .company-settings-left,
+  .company-settings-right {
+    width: 100%;
+  }
+
+  .company-settings-right button {
+    width: 100%;
+  }
+
+  .company-modal-content-settings {
+    width: 90%;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .company-modal-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .company-confirm-delete {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-settings-container {
+    margin: 70px 0.5rem 0.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .company-settings-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .company-settings-item {
+    padding: 1rem;
+  }
+
+  .company-settings-left h3 {
+    font-size: 0.9rem;
+  }
+
+  .company-settings-right input,
+  .company-settings-right button {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* 🌟 Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.company-settings-item {
+  animation: slideIn 0.3s ease-out forwards;
+}

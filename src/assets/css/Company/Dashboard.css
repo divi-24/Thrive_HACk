@@ -1,0 +1,698 @@
+.container {
+  max-width: 900px;
+  margin: 5%;
+}
+
+.card {
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.btn {
+  border-radius: 8px;
+}
+
+/* Main container styling */
+.company-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 40px 40px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.company-dashboard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(0, 157, 185, 0.05), transparent 60%);
+  pointer-events: none;
+}
+
+/* Dashboard title */
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dashboard-title svg {
+  color: #009db9;
+  font-size: 2.2rem;
+  filter: drop-shadow(0 0 10px rgba(0, 157, 185, 0.3));
+}
+
+/* Post Job Button */
+.post-job-btn {
+  background: linear-gradient(45deg, #009db9, #007e94);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 157, 185, 0.3);
+  backdrop-filter: blur(4px);
+  width: auto;
+  min-width: 200px;
+}
+
+.post-job-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 157, 185, 0.4);
+  background: linear-gradient(45deg, #00b3d4, #009db9);
+}
+
+.post-job-btn svg {
+  font-size: 1.2rem;
+}
+
+/* No jobs message */
+.no-jobs-message {
+  text-align: center;
+  background-color: #e3f2fd;
+  color: #0277bd;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Job Card */
+.job-card {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(18, 18, 18, 0.9));
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 157, 185, 0.1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  margin-bottom: 25px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #009db9, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 157, 185, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.job-card:hover::before {
+  opacity: 1;
+}
+
+/* Job Title */
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  padding-right: 100px; /* Make space for status badge */
+}
+
+/* Job Description */
+.job-description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Job Details Section */
+.job-details {
+  background: rgba(0, 157, 185, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid rgba(0, 157, 185, 0.1);
+}
+
+.job-details p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.job-details strong {
+  color: #009db9;
+  font-weight: 600;
+  min-width: 140px;
+}
+
+/* Skills and Responsibilities */
+.skills-list, .responsibilities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.skill-tag, .responsibility-tag {
+  background: rgba(0, 157, 185, 0.1);
+  color: #009db9;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 157, 185, 0.2);
+}
+
+.skill-tag:hover, .responsibility-tag:hover {
+  background: rgba(0, 157, 185, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Job Actions */
+.job-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.job-actions button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  background: rgba(0, 157, 185, 0.1);
+  color: #009db9;
+  border: 1px solid rgba(0, 157, 185, 0.2);
+}
+
+.job-actions button:hover {
+  background: rgba(0, 157, 185, 0.15);
+  transform: translateY(-1px);
+}
+
+.job-actions button svg {
+  font-size: 1rem;
+}
+
+/* Status Badge */
+.status-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: rgba(0, 157, 185, 0.15);
+  color: #009db9;
+  border: 1px solid rgba(0, 157, 185, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 157, 185, 0.1);
+}
+
+.status-badge:hover {
+  background: rgba(0, 157, 185, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0, 157, 185, 0.15);
+}
+
+.status-badge.paused {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 157, 185, 0.1);
+  border-radius: 50%;
+  border-top-color: #009db9;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.loading-text {
+  color: #009db9;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .company-dashboard {
+    padding: 80px 30px 30px;
+  }
+  
+  .job-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-dashboard {
+    padding: 70px 20px 20px;
+  }
+
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .job-title {
+    font-size: 1.3rem;
+    padding-right: 80px;
+  }
+
+  .job-actions {
+    flex-wrap: wrap;
+  }
+
+  .job-actions button {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+  }
+
+  .status-badge {
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-dashboard {
+    padding: 60px 15px 15px;
+  }
+
+  .post-job-btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .job-details strong {
+    min-width: 100px;
+  }
+
+  .status-badge {
+    top: 12px;
+    right: 12px;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .job-title {
+    padding-right: 70px;
+  }
+}
+
+/* Animation for new cards */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.job-card {
+  animation: cardAppear 0.5s ease forwards;
+}
+
+/* Edit & Delete Buttons */
+.edit-btn, .delete-btn {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.edit-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-1px);
+}
+
+.delete-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-1px);
+}
+
+/* Bookmark Button */
+.bookmark-btn {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bookmark-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-1px);
+}
+
+.bookmark-btn svg {
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.bookmark-btn.bookmarked {
+  background-color: #1abc9c;
+  color: #ffffff;
+}
+
+.bookmark-btn.bookmarked svg {
+  animation: bookmarkPop 0.3s ease forwards;
+  fill: #ffffff;
+}
+
+@keyframes bookmarkPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Share Button */
+.share-btn {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.share-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-1px);
+}
+
+.share-btn svg {
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover svg {
+  animation: shareRotate 0.5s ease;
+}
+
+@keyframes shareRotate {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-20deg); }
+  75% { transform: rotate(20deg); }
+  100% { transform: rotate(0); }
+}
+
+/* View Applications Button */
+.view-applications-btn {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-applications-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-1px);
+}
+
+/* Hiring Status Button */
+.btn-success {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #27ae60;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-1px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .job-actions {
+    gap: 8px;
+  }
+
+  .job-actions button {
+    padding: 6px 12px;
+    font-size: 13px;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .job-actions button {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  width: 800px !important;
+  text-align: center !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Form Fields */
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit and Cancel Buttons */
+.submit-btn {
+  background-color: #007bff !important;
+  color: white;
+  padding: 10px  !important;
+  border: none  !important;
+  cursor: pointer  !important;
+  width: 15%  !important;
+}
+
+.cancel-btn {
+  background-color: #dc3545  !important;
+  color: white;
+  padding: 10px  !important;
+  border: none  !important;
+  cursor: pointer !important;
+  width: 15% !important;
+  margin-top: 10px !important;
+  align-items: center !important;
+  text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  font-size: 17px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.delete-confirm-btn {
+margin-left: auto !important;
+margin-right: auto !important;
+width: 15% !important;
+border: none  !important;
+cursor: pointer !important;
+align-items: center !important;
+text-align: center !important;
+display: flex !important;
+justify-content: center !important;
+}
+
+.lastDate {
+  display: flex;
+  flex-direction: column;
+  align-items : flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Styling the label */
+label {
+  text-align: left !important;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Styling the date input field */
+input[type="date"] {
+width: 100%;
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #f8f9fa;
+transition: all 0.3s ease-in-out;
+}
+
+/* When the user clicks inside the date input */
+input[type="date"]:focus {
+border-color: #007bff;
+background-color: white;
+outline: none;
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Styling for better mobile experience */
+@media (max-width: 768px) {
+input[type="date"] {
+  font-size: 16px;
+  padding: 12px;
+}
+}
+
+/* Common button icon styles */
+.job-actions button svg {
+  margin-right: 8px;
+}
+
+/* Active states for buttons */
+.bookmark-btn:active, .share-btn:active {
+  transform: translateY(1px);
+}
+
+/* Button hover effects */
+.job-actions button:hover svg {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments for icons */
+@media (max-width: 768px) {
+  .job-actions button svg {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .job-actions button {
+    justify-content: center;
+  }
+  
+  .job-actions button svg {
+    margin-right: 6px;
+  }
+}
+
+/* Remove floating action buttons */
+.floating-actions {
+  display: none;
+}
