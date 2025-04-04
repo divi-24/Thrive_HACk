@@ -103,6 +103,200 @@
   transform-origin: left;
 }
 
+/* Navigation and Authentication Buttons Container */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  padding: 0.35rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #bfbcbc, #009db9);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 157, 185, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  animation: float 3s ease-in-out infinite, gradientShift 8s ease infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #bfbcbc, #009db9);
+    box-shadow: 0 2px 8px rgba(0, 157, 185, 0.2);
+  }
+  25% {
+    background: linear-gradient(135deg, #009db9, #00a8c5);
+    box-shadow: 0 2px 8px rgba(0, 157, 185, 0.3);
+  }
+  50% {
+    background: linear-gradient(135deg, #00a8c5, #00b8e0);
+    box-shadow: 0 2px 8px rgba(0, 157, 185, 0.4);
+  }
+  75% {
+    background: linear-gradient(135deg, #00b8e0, #bfbcbc);
+    box-shadow: 0 2px 8px rgba(0, 157, 185, 0.3);
+  }
+  100% {
+    background: linear-gradient(135deg, #bfbcbc, #009db9);
+    box-shadow: 0 2px 8px rgba(0, 157, 185, 0.2);
+  }
+}
+
+.toggle-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 157, 185, 0.3);
+  background: linear-gradient(135deg, #00d1f5, #00a8c5);
+  animation: none;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.toggle-btn:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 1px 4px rgba(0, 157, 185, 0.2);
+  filter: brightness(0.9);
+  transition: all 0.1s ease;
+}
+
+/* Enhanced shine effect */
+.toggle-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: translateX(-100%) skewX(-15deg);
+  transition: transform 0.6s ease;
+}
+
+.toggle-btn:hover::before {
+  transform: translateX(200%) skewX(-15deg);
+  transition: transform 1s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+/* Enhanced pulsing animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 157, 185, 0.6),
+                0 0 0 0 rgba(0, 230, 150, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(0, 157, 185, 0),
+                0 0 0 15px rgba(0, 230, 150, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 157, 185, 0.6),
+                0 0 0 0 rgba(0, 230, 150, 0.6);
+  }
+}
+
+.toggle-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  animation: pulse 2s infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.toggle-btn:hover::after {
+  opacity: 1;
+}
+
+/* Enhanced icon animation */
+.toggle-btn i {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  animation: iconWiggle 3s ease-in-out infinite;
+}
+
+@keyframes iconWiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+.toggle-btn:hover i {
+  transform: rotate(360deg) scale(1.2);
+  color: #ffffff;
+  animation: iconSpin 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes iconSpin {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
+
+/* Text animation */
+.toggle-btn span {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover span {
+  transform: translateX(2px);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.5px;
+}
+
+/* Add a subtle border animation */
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(0, 157, 185, 0.2);
+  }
+  50% {
+    border-color: rgba(0, 230, 150, 0.4);
+  }
+}
+
+.toggle-btn {
+  border: 1px solid transparent;
+  animation: float 3s ease-in-out infinite, gradientShift 8s ease infinite, borderGlow 3s infinite;
+}
+
 /* Authentication Buttons */
 .auth-buttons {
   display: flex;
