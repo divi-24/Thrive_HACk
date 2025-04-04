@@ -1,0 +1,519 @@
+/* 🌟 Root Element Styling */
+:root {
+    background-color: #0a0a0a;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #e5e7eb;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 🌟 General Profile Layout */
+.profile-container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: 60px auto 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border: 1px solid rgba(0, 157, 185, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    position: relative;
+}
+
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #009db9, transparent);
+    opacity: 0.5;
+}
+
+/* 🌟 Sidebar Styling */
+.sidebar {
+    width: 300px;
+    background: rgba(26, 26, 26, 0.7);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgba(0, 157, 185, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+/* 🌟 Profile Photo Box */
+.profile-photo-profile {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(0, 157, 185, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.profile-photo-profile:hover {
+    border-color: #009db9;
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 157, 185, 0.3);
+}
+
+.profile-photo-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.default-profile-icon-dev-profile {
+    font-size: 80px;
+    color: #009db9;
+}
+
+/* 🌟 Upload Icon */
+.upload-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: #009db9;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 157, 185, 0.3);
+}
+
+.upload-icon:hover {
+    background: #00b3d4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 157, 185, 0.4);
+}
+
+/* 🌟 Sidebar Navigation */
+.sidebar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.sidebar-nav button {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    font-size: 0.875rem;
+    color: #e5e7eb;
+    background: transparent;
+    border: 1px solid rgba(0, 157, 185, 0.1);
+    text-align: left;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.sidebar-nav button:hover,
+.sidebar-nav .active {
+    background: rgba(0, 157, 185, 0.1) !important;
+    color: #009db9 !important;
+    border-color: rgba(0, 157, 185, 0.2) !important;
+    transform: translateY(-1px);
+}
+
+/* 🌟 Profile Details Section */
+.profile-details {
+    flex: 1;
+    padding: 2.5rem 3rem;
+    overflow-y: auto;
+    background: rgba(26, 26, 26, 0.7);
+}
+
+/* 🌟 Section Headings */
+.profile-details h2 {
+    font-size: 1.5rem;
+    color: #009db9;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 157, 185, 0.1);
+    padding-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* 🌟 Profile Fields */
+.profile-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 157, 185, 0.1);
+    transition: all 0.2s ease;
+}
+
+.profile-field:hover {
+    background: rgba(0, 157, 185, 0.05);
+}
+
+.profile-field strong {
+    flex: 1;
+    color: #009db9;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.field-value {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e5e7eb;
+    font-size: 0.875rem;
+}
+
+/* 🌟 Edit Mode Input */
+.edit-mode {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.edit-mode input,
+.edit-mode select {
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(0, 157, 185, 0.2);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    width: 100%;
+    color: #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.edit-mode input:focus,
+.edit-mode select:focus {
+    outline: none;
+    border-color: #009db9;
+    box-shadow: 0 0 0 2px rgba(0, 157, 185, 0.1);
+}
+
+/* 🌟 Icons Styling */
+.edit-icon {
+    color: #009db9;
+    cursor: pointer;
+    margin-left: 0.75rem;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(0, 157, 185, 0.1);
+}
+
+.edit-icon:hover {
+    background: rgba(0, 157, 185, 0.2);
+    transform: translateY(-1px);
+}
+
+.save-icon {
+    color: #009db9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(0, 157, 185, 0.1);
+}
+
+.save-icon:hover {
+    background: rgba(0, 157, 185, 0.2);
+    transform: translateY(-1px);
+}
+
+.cancel-icon {
+    color: #f87171;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(248, 113, 113, 0.1);
+}
+
+.cancel-icon:hover {
+    background: rgba(248, 113, 113, 0.2);
+    transform: translateY(-1px);
+}
+
+/* 🌟 Work Experience Section */
+.work-experience {
+    background: rgba(26, 26, 26, 0.7);
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #009db9;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.work-experience:hover {
+    background: rgba(26, 26, 26, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 157, 185, 0.1);
+}
+
+.work-experience strong {
+    font-size: 0.875rem;
+    color: #009db9;
+    font-weight: 600;
+}
+
+.work-experience p {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+/* 🌟 Work Experience Add & Remove */
+.delete-icon {
+    color: #f87171;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(248, 113, 113, 0.1);
+    transition: all 0.2s ease;
+}
+
+.delete-icon:hover {
+    background: rgba(248, 113, 113, 0.2);
+    transform: translateY(-1px);
+}
+
+/* 🌟 Add Work Experience Form */
+.add-experience {
+    background: rgba(26, 26, 26, 0.7);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    border: 1px solid rgba(0, 157, 185, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.add-experience h4 {
+    font-size: 1rem;
+    color: #009db9;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.add-experience form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.add-experience input,
+.add-experience textarea {
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(0, 157, 185, 0.2);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.add-experience input:focus,
+.add-experience textarea:focus {
+    outline: none;
+    border-color: #009db9;
+    box-shadow: 0 0 0 2px rgba(0, 157, 185, 0.1);
+}
+
+/* 🌟 Add Item Section */
+.add-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.add-item input {
+    flex: 1;
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(0, 157, 185, 0.2);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #e5e7eb;
+}
+
+.add-icon {
+    color: #009db9;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background: rgba(0, 157, 185, 0.1);
+    transition: all 0.2s ease;
+}
+
+.add-icon:hover {
+    background: rgba(0, 157, 185, 0.2);
+    transform: translateY(-1px);
+}
+
+/* 🌟 List Container */
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.list-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 157, 185, 0.1);
+    border: 1px solid rgba(0, 157, 185, 0.2);
+    border-radius: 999px;
+    font-size: 0.875rem;
+    color: #009db9;
+    transition: all 0.2s ease;
+}
+
+.list-item:hover {
+    background: rgba(0, 157, 185, 0.2);
+    transform: translateY(-1px);
+}
+
+/* 🌟 Buttons */
+button {
+    background: rgba(0, 157, 185, 0.1);
+    color: #009db9;
+    border: 1px solid rgba(0, 157, 185, 0.2);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: rgba(0, 157, 185, 0.2);
+    transform: translateY(-1px);
+}
+
+/* 🌟 Loading State */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #009db9;
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 1024px) {
+    .profile-container {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .profile-details {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-photo-profile {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sidebar-nav button {
+        padding: 0.75rem 1rem;
+    }
+
+    .profile-field {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .field-value {
+        width: 100%;
+    }
+
+    .edit-mode {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .edit-mode input,
+    .edit-mode select {
+        width: 100%;
+    }
+}
+
+/* 🌟 Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(26, 26, 26, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 157, 185, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 157, 185, 0.3);
+}
