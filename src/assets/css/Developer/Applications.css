@@ -1,0 +1,527 @@
+/* 🌟 Root Element Styling */
+:root {
+    background-color: #0a0a0a;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+    color: #e5e7eb;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    background-color: #0a0a0a;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* 🌟 General Application Container Styling */
+@import "tailwindcss";
+
+.applications-container {
+    background: linear-gradient(180deg, #0a0a0a, #1a1a1a);
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 80px 0 2rem 0;
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🌟 Main Content Wrapper */
+.content-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(26, 26, 26, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 157, 185, 0.1);
+}
+
+/* 🌟 Header Tabs */
+.tab-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 0;
+    padding: 0.5rem;
+    background: rgba(13, 13, 13, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 157, 185, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tab-button {
+    background: rgba(26, 26, 26, 0.4);
+    color: #e5e7eb;
+    border: 1px solid rgba(0, 157, 185, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: auto;
+    flex: 1;
+    justify-content: center;
+}
+
+.tab-button:hover {
+    background: rgba(0, 157, 185, 0.1);
+    transform: translateY(-1px);
+    border-color: rgba(0, 157, 185, 0.3);
+}
+
+.tab-button.active {
+    background: #009db9;
+    color: #ffffff;
+    border-color: #009db9;
+    box-shadow: 0 0 20px rgba(0, 157, 185, 0.2);
+}
+
+/* 🌟 Search Container */
+.search-container {
+    width: 100%;
+    margin: 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    color: #e5e7eb;
+    background: rgba(13, 13, 13, 0.6);
+    border: 1px solid rgba(0, 157, 185, 0.1);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #009db9;
+    box-shadow: 0 0 0 2px rgba(0, 157, 185, 0.1);
+    background: rgba(13, 13, 13, 0.8);
+}
+
+/* 🌟 Table Container */
+.table-container {
+    width: 100%;
+    margin: 0;
+    background: rgba(13, 13, 13, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid rgba(0, 157, 185, 0.1);
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: transparent;
+}
+
+.table thead {
+    background: rgba(13, 13, 13, 0.8);
+}
+
+.table th {
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #009db9;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: transparent;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(0, 157, 185, 0.1);
+}
+
+.table td {
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    color: #e5e7eb;
+    border-bottom: 1px solid rgba(0, 157, 185, 0.1);
+    background: transparent;
+}
+
+.table tr:hover td {
+    background: rgba(0, 157, 185, 0.05);
+}
+
+/* 🌟 Badge Styling */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 0.375rem;
+    background: rgba(0, 157, 185, 0.1);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    color: #009db9;
+}
+
+/* 🌟 No Results Message */
+.no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #9ca3af;
+    font-size: 0.875rem;
+    background: rgba(13, 13, 13, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 157, 185, 0.1);
+    margin: 1rem 0;
+}
+
+/* 🌟 Status Badge */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-applied {
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.status-under-process {
+    background: rgba(245, 158, 11, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.status-hired {
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+/* 🌟 Dropdown Menu */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-icon {
+    color: #9ca3af;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.dropdown-icon:hover {
+    color: #e5e7eb;
+    background: rgba(0, 157, 185, 0.05);
+}
+
+.dropdown-select {
+    position: absolute;
+    right: 0;
+    top: 120%;
+    z-index: 999;
+    background: rgba(30, 30, 30, 0.95);
+    border: 1px solid rgba(0, 157, 185, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 180px;
+    padding: 0.5rem;
+    backdrop-filter: blur(8px);
+}
+
+.dropdown-select option {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: #e5e7eb;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-select option:hover {
+    background: rgba(0, 157, 185, 0.1);
+}
+
+/* 🌟 Error Message */
+.error-message- {
+    background: rgba(239, 68, 68, 0.1);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 1rem auto;
+    max-width: 600px;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease;
+}
+
+/* 🌟 Loading State */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: #e5e7eb;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 157, 185, 0.1);
+    border-radius: 50%;
+    border-top-color: #009db9;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌟 Job Details Styling */
+.job-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    color: #009db9;
+}
+
+.job-description {
+    color: #9ca3af;
+    line-height: 1.5;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    background: rgba(0, 157, 185, 0.1);
+    border: 1px solid rgba(0, 157, 185, 0.2);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: #009db9;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(0, 157, 185, 0.2);
+    transform: translateY(-1px);
+}
+
+.salary-range,
+.work-mode,
+.location,
+.deadline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.icon {
+    color: #009db9;
+    font-size: 1rem;
+}
+
+/* 🌟 Animation Keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations */
+.table tbody tr {
+    animation: slideIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+.table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+.table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+/* ... and so on */
+
+/* 🌟 Responsive Design Enhancements */
+@media (max-width: 1024px) {
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill-tag {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        margin: 1rem;
+    }
+
+    .search-input {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Override any potential Tailwind classes */
+.whitespace-nowrap,
+.bg-gray-100,
+.bg-white,
+[class*="bg-"] {
+    background: #1a1a1a !important;
+    color: #e5e7eb !important;
+}
+
+.border-b,
+[class*="border-"] {
+    border-color: rgba(0, 157, 185, 0.1) !important;
+}
+
+/* Fix for table header background */
+th.whitespace-nowrap,
+th[class*="bg-"],
+td[class*="bg-"] {
+    background: #1a1a1a !important;
+}
+
+/* Additional fixes for potential white backgrounds */
+[class*="text-gray"],
+[class*="text-black"] {
+    color: #e5e7eb !important;
+}
+
+/* Ensure dark background propagates */
+div, section, main {
+    background-color: inherit;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 1400px) {
+    .content-wrapper {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .content-wrapper {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .tab-container {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    .tab-button {
+        padding: 0.625rem 1rem;
+    }
+
+    .table td, .table th {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .applications-container {
+        padding: 70px 1rem 1rem 1rem;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    
+    .tab-container {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    
+    .tab-button {
+        width: 100%;
+    }
+
+    .job-description {
+        max-width: 200px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill-tag {
+        width: fit-content;
+    }
+}
